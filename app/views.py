@@ -25,6 +25,11 @@ def save_csv_to_db(file_path):
         db.session.add(domain)
         db.session.commit()
 
+@app.route("/initialize_database", methods=["GET","POST"])
+def init_db():
+    db.create_all()
+    return "database created"
+
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
