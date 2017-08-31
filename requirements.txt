@@ -16,3 +16,4 @@ cfenv
 redis
 pandas
 cfenv
+strict_rfc3339
